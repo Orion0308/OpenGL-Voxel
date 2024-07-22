@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/l/Programming/OpenGL/src/glad.c" "src/CMakeFiles/OpenGL.dir/glad.c.o" "gcc" "src/CMakeFiles/OpenGL.dir/glad.c.o.d"
+  "/home/l/Programming/OpenGL/src/Engine.cpp" "src/CMakeFiles/OpenGL.dir/Engine.cpp.o" "gcc" "src/CMakeFiles/OpenGL.dir/Engine.cpp.o.d"
+  "/home/l/Programming/OpenGL/src/WindowManager.cpp" "src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o" "gcc" "src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o.d"
   "/home/l/Programming/OpenGL/src/main.cpp" "src/CMakeFiles/OpenGL.dir/main.cpp.o" "gcc" "src/CMakeFiles/OpenGL.dir/main.cpp.o.d"
   )
 

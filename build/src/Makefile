@@ -130,6 +130,78 @@ OpenGL/fast:
 	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/build
 .PHONY : OpenGL/fast
 
+Engine.o: Engine.cpp.o
+.PHONY : Engine.o
+
+# target to build an object file
+Engine.cpp.o:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/Engine.cpp.o
+.PHONY : Engine.cpp.o
+
+Engine.i: Engine.cpp.i
+.PHONY : Engine.i
+
+# target to preprocess a source file
+Engine.cpp.i:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/Engine.cpp.i
+.PHONY : Engine.cpp.i
+
+Engine.s: Engine.cpp.s
+.PHONY : Engine.s
+
+# target to generate assembly for a file
+Engine.cpp.s:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/Engine.cpp.s
+.PHONY : Engine.cpp.s
+
+WindowManager.o: WindowManager.cpp.o
+.PHONY : WindowManager.o
+
+# target to build an object file
+WindowManager.cpp.o:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o
+.PHONY : WindowManager.cpp.o
+
+WindowManager.i: WindowManager.cpp.i
+.PHONY : WindowManager.i
+
+# target to preprocess a source file
+WindowManager.cpp.i:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/WindowManager.cpp.i
+.PHONY : WindowManager.cpp.i
+
+WindowManager.s: WindowManager.cpp.s
+.PHONY : WindowManager.s
+
+# target to generate assembly for a file
+WindowManager.cpp.s:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/WindowManager.cpp.s
+.PHONY : WindowManager.cpp.s
+
+glad.o: glad.c.o
+.PHONY : glad.o
+
+# target to build an object file
+glad.c.o:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/glad.c.o
+.PHONY : glad.c.o
+
+glad.i: glad.c.i
+.PHONY : glad.i
+
+# target to preprocess a source file
+glad.c.i:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/glad.c.i
+.PHONY : glad.c.i
+
+glad.s: glad.c.s
+.PHONY : glad.s
+
+# target to generate assembly for a file
+glad.c.s:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/glad.c.s
+.PHONY : glad.c.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -163,6 +235,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OpenGL"
+	@echo "... Engine.o"
+	@echo "... Engine.i"
+	@echo "... Engine.s"
+	@echo "... WindowManager.o"
+	@echo "... WindowManager.i"
+	@echo "... WindowManager.s"
+	@echo "... glad.o"
+	@echo "... glad.i"
+	@echo "... glad.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

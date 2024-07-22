@@ -1,7 +1,31 @@
 [
 {
+  "directory": "/home/l/Programming/OpenGL/build",
+  "command": "/usr/bin/cc  -I/home/l/Programming/OpenGL/include -Wno-old-style-cast -Wno-c++11-narrowing -Wno-iso-c++-forbidden-cast -o CMakeFiles/glad.dir/src/glad.c.o -c /home/l/Programming/OpenGL/src/glad.c",
+  "file": "/home/l/Programming/OpenGL/src/glad.c",
+  "output": "CMakeFiles/glad.dir/src/glad.c.o"
+},
+{
   "directory": "/home/l/Programming/OpenGL/build/src",
-  "command": "/usr/bin/c++   -std=gnu++23 -g -g -O0 -Wall -Wextra -Wpedantic -o CMakeFiles/OpenGL.dir/main.cpp.o -c /home/l/Programming/OpenGL/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/l/Programming/OpenGL/include -std=gnu++23 -g -g -O0 -Wall -Wextra -Wpedantic -o CMakeFiles/OpenGL.dir/Engine.cpp.o -c /home/l/Programming/OpenGL/src/Engine.cpp",
+  "file": "/home/l/Programming/OpenGL/src/Engine.cpp",
+  "output": "src/CMakeFiles/OpenGL.dir/Engine.cpp.o"
+},
+{
+  "directory": "/home/l/Programming/OpenGL/build/src",
+  "command": "/usr/bin/c++  -I/home/l/Programming/OpenGL/include -std=gnu++23 -g -g -O0 -Wall -Wextra -Wpedantic -o CMakeFiles/OpenGL.dir/WindowManager.cpp.o -c /home/l/Programming/OpenGL/src/WindowManager.cpp",
+  "file": "/home/l/Programming/OpenGL/src/WindowManager.cpp",
+  "output": "src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o"
+},
+{
+  "directory": "/home/l/Programming/OpenGL/build/src",
+  "command": "/usr/bin/cc  -I/home/l/Programming/OpenGL/include -g -g -O0 -Wall -Wextra -Wpedantic -o CMakeFiles/OpenGL.dir/glad.c.o -c /home/l/Programming/OpenGL/src/glad.c",
+  "file": "/home/l/Programming/OpenGL/src/glad.c",
+  "output": "src/CMakeFiles/OpenGL.dir/glad.c.o"
+},
+{
+  "directory": "/home/l/Programming/OpenGL/build/src",
+  "command": "/usr/bin/c++  -I/home/l/Programming/OpenGL/include -std=gnu++23 -g -g -O0 -Wall -Wextra -Wpedantic -o CMakeFiles/OpenGL.dir/main.cpp.o -c /home/l/Programming/OpenGL/src/main.cpp",
   "file": "/home/l/Programming/OpenGL/src/main.cpp",
   "output": "src/CMakeFiles/OpenGL.dir/main.cpp.o"
 }

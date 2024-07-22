@@ -1,9 +1,19 @@
-#include <glm/glm.hpp>
-#include <iostream>
+#include "Engine.hpp"
+#include <GL/gl.h>
+#include <GLFW/glfw3.h>
 
+int main() {
+  Engine engine;
 
-int main(){
-    glm::vec3 position{0,0,0};
-    std::cout<<"position x: "<<position.x<<"\n";
-    return 0;
+  auto *window = engine.getWindowManager().getWindow();
+  while (!glfwWindowShouldClose(window)) {
+
+    engine.update();
+
+    // render loop starts here
+
+    glfwPollEvents();
+    glfwSwapBuffers(window);
+  }
+  return 0;
 }

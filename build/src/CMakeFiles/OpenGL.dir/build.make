@@ -69,10 +69,52 @@ include src/CMakeFiles/OpenGL.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/OpenGL.dir/flags.make
 
+src/CMakeFiles/OpenGL.dir/Engine.cpp.o: src/CMakeFiles/OpenGL.dir/flags.make
+src/CMakeFiles/OpenGL.dir/Engine.cpp.o: /home/l/Programming/OpenGL/src/Engine.cpp
+src/CMakeFiles/OpenGL.dir/Engine.cpp.o: src/CMakeFiles/OpenGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/OpenGL.dir/Engine.cpp.o"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/OpenGL.dir/Engine.cpp.o -MF CMakeFiles/OpenGL.dir/Engine.cpp.o.d -o CMakeFiles/OpenGL.dir/Engine.cpp.o -c /home/l/Programming/OpenGL/src/Engine.cpp
+
+src/CMakeFiles/OpenGL.dir/Engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenGL.dir/Engine.cpp.i"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/l/Programming/OpenGL/src/Engine.cpp > CMakeFiles/OpenGL.dir/Engine.cpp.i
+
+src/CMakeFiles/OpenGL.dir/Engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGL.dir/Engine.cpp.s"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/l/Programming/OpenGL/src/Engine.cpp -o CMakeFiles/OpenGL.dir/Engine.cpp.s
+
+src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o: src/CMakeFiles/OpenGL.dir/flags.make
+src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o: /home/l/Programming/OpenGL/src/WindowManager.cpp
+src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o: src/CMakeFiles/OpenGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o -MF CMakeFiles/OpenGL.dir/WindowManager.cpp.o.d -o CMakeFiles/OpenGL.dir/WindowManager.cpp.o -c /home/l/Programming/OpenGL/src/WindowManager.cpp
+
+src/CMakeFiles/OpenGL.dir/WindowManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenGL.dir/WindowManager.cpp.i"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/l/Programming/OpenGL/src/WindowManager.cpp > CMakeFiles/OpenGL.dir/WindowManager.cpp.i
+
+src/CMakeFiles/OpenGL.dir/WindowManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGL.dir/WindowManager.cpp.s"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/l/Programming/OpenGL/src/WindowManager.cpp -o CMakeFiles/OpenGL.dir/WindowManager.cpp.s
+
+src/CMakeFiles/OpenGL.dir/glad.c.o: src/CMakeFiles/OpenGL.dir/flags.make
+src/CMakeFiles/OpenGL.dir/glad.c.o: /home/l/Programming/OpenGL/src/glad.c
+src/CMakeFiles/OpenGL.dir/glad.c.o: src/CMakeFiles/OpenGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/OpenGL.dir/glad.c.o"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/OpenGL.dir/glad.c.o -MF CMakeFiles/OpenGL.dir/glad.c.o.d -o CMakeFiles/OpenGL.dir/glad.c.o -c /home/l/Programming/OpenGL/src/glad.c
+
+src/CMakeFiles/OpenGL.dir/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/OpenGL.dir/glad.c.i"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/l/Programming/OpenGL/src/glad.c > CMakeFiles/OpenGL.dir/glad.c.i
+
+src/CMakeFiles/OpenGL.dir/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/OpenGL.dir/glad.c.s"
+	cd /home/l/Programming/OpenGL/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/l/Programming/OpenGL/src/glad.c -o CMakeFiles/OpenGL.dir/glad.c.s
+
 src/CMakeFiles/OpenGL.dir/main.cpp.o: src/CMakeFiles/OpenGL.dir/flags.make
 src/CMakeFiles/OpenGL.dir/main.cpp.o: /home/l/Programming/OpenGL/src/main.cpp
 src/CMakeFiles/OpenGL.dir/main.cpp.o: src/CMakeFiles/OpenGL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/OpenGL.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/OpenGL.dir/main.cpp.o"
 	cd /home/l/Programming/OpenGL/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/OpenGL.dir/main.cpp.o -MF CMakeFiles/OpenGL.dir/main.cpp.o.d -o CMakeFiles/OpenGL.dir/main.cpp.o -c /home/l/Programming/OpenGL/src/main.cpp
 
 src/CMakeFiles/OpenGL.dir/main.cpp.i: cmake_force
@@ -85,15 +127,22 @@ src/CMakeFiles/OpenGL.dir/main.cpp.s: cmake_force
 
 # Object files for target OpenGL
 OpenGL_OBJECTS = \
+"CMakeFiles/OpenGL.dir/Engine.cpp.o" \
+"CMakeFiles/OpenGL.dir/WindowManager.cpp.o" \
+"CMakeFiles/OpenGL.dir/glad.c.o" \
 "CMakeFiles/OpenGL.dir/main.cpp.o"
 
 # External object files for target OpenGL
 OpenGL_EXTERNAL_OBJECTS =
 
+src/OpenGL: src/CMakeFiles/OpenGL.dir/Engine.cpp.o
+src/OpenGL: src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o
+src/OpenGL: src/CMakeFiles/OpenGL.dir/glad.c.o
 src/OpenGL: src/CMakeFiles/OpenGL.dir/main.cpp.o
 src/OpenGL: src/CMakeFiles/OpenGL.dir/build.make
+src/OpenGL: libglad.a
 src/OpenGL: src/CMakeFiles/OpenGL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable OpenGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable OpenGL"
 	cd /home/l/Programming/OpenGL/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

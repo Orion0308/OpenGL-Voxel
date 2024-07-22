@@ -15,7 +15,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Add subdirectories
 add_subdirectory(src)
-add_subdirectory(include)
 
 # Include directories
 include_directories(${PROJECT_SOURCE_DIR}/include)
+
+
+find_package(glfw3 3.3 REQUIRED)
+
+add_library(glad STATIC src/glad.c)
+target_include_directories(glad PUBLIC include)
+target_compile_options(glad PRIVATE -Wno-old-style-cast -Wno-c++11-narrowing -Wno-iso-c++-forbidden-cast)

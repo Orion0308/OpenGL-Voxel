@@ -63,34 +63,18 @@ CMAKE_BINARY_DIR = /home/l/Programming/OpenGL/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/glad.dir/all
 all: src/all
-all: include/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/preinstall
-preinstall: include/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/glad.dir/clean
 clean: src/clean
-clean: include/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory include
-
-# Recursive "all" directory target.
-include/all:
-.PHONY : include/all
-
-# Recursive "preinstall" directory target.
-include/preinstall:
-.PHONY : include/preinstall
-
-# Recursive "clean" directory target.
-include/clean:
-.PHONY : include/clean
 
 #=============================================================================
 # Directory level rules for directory src
@@ -108,18 +92,44 @@ src/clean: src/CMakeFiles/OpenGL.dir/clean
 .PHONY : src/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/glad.dir
+
+# All Build rule for target.
+CMakeFiles/glad.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=6,7 "Built target glad"
+.PHONY : CMakeFiles/glad.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/glad.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/l/Programming/OpenGL/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/glad.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/l/Programming/OpenGL/build/CMakeFiles 0
+.PHONY : CMakeFiles/glad.dir/rule
+
+# Convenience name for target.
+glad: CMakeFiles/glad.dir/rule
+.PHONY : glad
+
+# clean rule for target.
+CMakeFiles/glad.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/clean
+.PHONY : CMakeFiles/glad.dir/clean
+
+#=============================================================================
 # Target rules for target src/CMakeFiles/OpenGL.dir
 
 # All Build rule for target.
-src/CMakeFiles/OpenGL.dir/all:
+src/CMakeFiles/OpenGL.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=1,2 "Built target OpenGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l/Programming/OpenGL/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target OpenGL"
 .PHONY : src/CMakeFiles/OpenGL.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/OpenGL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/l/Programming/OpenGL/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/l/Programming/OpenGL/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/OpenGL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l/Programming/OpenGL/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/OpenGL.dir/rule
