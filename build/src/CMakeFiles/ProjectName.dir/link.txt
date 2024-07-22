@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ProjectName.dir/main.cpp.o -o ProjectName

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/l/Programming/OpenGL/build/src",
+  "command": "/usr/bin/c++   -std=gnu++23 -g -g -O0 -Wall -Wextra -Wpedantic -o CMakeFiles/OpenGL.dir/main.cpp.o -c /home/l/Programming/OpenGL/src/main.cpp",
+  "file": "/home/l/Programming/OpenGL/src/main.cpp",
+  "output": "src/CMakeFiles/OpenGL.dir/main.cpp.o"
+}
+]
