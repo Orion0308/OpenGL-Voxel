@@ -4,13 +4,13 @@
 
 int main() {
   Engine engine;
-
   auto *window = engine.getWindowManager().getWindow();
-  while (!glfwWindowShouldClose(window)) {
 
+  while (!glfwWindowShouldClose(window)) {
     engine.update();
 
     // render loop starts here
+    engine.render();
 
     glfwPollEvents();
     glfwSwapBuffers(window);

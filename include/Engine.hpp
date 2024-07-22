@@ -12,6 +12,8 @@ private:
   WindowManager windowManager;
 
 public:
+    Engine();
+
     WindowManager &getWindowManager();
 
     void init();
