@@ -226,6 +226,30 @@ main.cpp.s:
 	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+stbInit.o: stbInit.cpp.o
+.PHONY : stbInit.o
+
+# target to build an object file
+stbInit.cpp.o:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/stbInit.cpp.o
+.PHONY : stbInit.cpp.o
+
+stbInit.i: stbInit.cpp.i
+.PHONY : stbInit.i
+
+# target to preprocess a source file
+stbInit.cpp.i:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/stbInit.cpp.i
+.PHONY : stbInit.cpp.i
+
+stbInit.s: stbInit.cpp.s
+.PHONY : stbInit.s
+
+# target to generate assembly for a file
+stbInit.cpp.s:
+	cd /home/l/Programming/OpenGL/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/OpenGL.dir/build.make src/CMakeFiles/OpenGL.dir/stbInit.cpp.s
+.PHONY : stbInit.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -247,6 +271,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... stbInit.o"
+	@echo "... stbInit.i"
+	@echo "... stbInit.s"
 .PHONY : help
 
 

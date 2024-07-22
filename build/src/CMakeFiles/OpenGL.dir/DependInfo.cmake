@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/l/Programming/OpenGL/src/Engine.cpp" "src/CMakeFiles/OpenGL.dir/Engine.cpp.o" "gcc" "src/CMakeFiles/OpenGL.dir/Engine.cpp.o.d"
   "/home/l/Programming/OpenGL/src/WindowManager.cpp" "src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o" "gcc" "src/CMakeFiles/OpenGL.dir/WindowManager.cpp.o.d"
   "/home/l/Programming/OpenGL/src/main.cpp" "src/CMakeFiles/OpenGL.dir/main.cpp.o" "gcc" "src/CMakeFiles/OpenGL.dir/main.cpp.o.d"
+  "/home/l/Programming/OpenGL/src/stbInit.cpp" "src/CMakeFiles/OpenGL.dir/stbInit.cpp.o" "gcc" "src/CMakeFiles/OpenGL.dir/stbInit.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
