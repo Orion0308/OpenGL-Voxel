@@ -23,15 +23,16 @@ private:
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
     int w, h, nrChan;
-    unsigned char *data = stbi_load(
-        "/home/l/Programming/OpenGL/textures/oak_planks.png", &w, &h, &nrChan, 0);
+    unsigned char *data =
+        stbi_load("/home/l/Programming/OpenGL/textures/oak_planks.png", &w, &h,
+                  &nrChan, 0);
     if (data) {
-      glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB,
-                   GL_UNSIGNED_BYTE, data);
+      glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE,
+                   data);
       glGenerateMipmap(GL_TEXTURE_2D);
-      //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
-      //                GL_LINEAR_MIPMAP_LINEAR);
-      //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+      // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
+      //                 GL_LINEAR_MIPMAP_LINEAR);
+      // glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
       std::cout << "Texture loaded successfully. Size: " << w << "x" << h
                 << ", Channels: " << nrChan << std::endl;
     } else {
