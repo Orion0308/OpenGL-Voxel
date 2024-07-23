@@ -52,7 +52,8 @@ void Engine::render() {
   glm::mat4 view = camera.GetViewMatrix();
   baseShader.setMat4("view", view);
 
-  singleVoxelBuffer.draw();
+  //singleVoxelBuffer.draw();
+  worldBuffer.draw();
 }
 
 // process all input: query GLFW whether relevant keys are pressed/released this

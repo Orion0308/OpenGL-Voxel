@@ -3,6 +3,7 @@
 #include "Texture.hpp"
 #include "VoxelBuffer.hpp"
 #include "WindowManager.hpp"
+#include "WorldBuffer.hpp"
 
 // Window //
 // Buffers
@@ -23,6 +24,7 @@ private:
   Shader baseShader;
   Texture texture;
   IShaderTexture iShaderTexture;
+  WorldBuffer worldBuffer;
 
 
 public:

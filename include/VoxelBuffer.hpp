@@ -1,3 +1,4 @@
+#pragma once
 #include "VoxelData.hpp"
 #include <glad/glad.h>
 
@@ -24,6 +25,7 @@ private:
     glEnableVertexAttribArray(1);
 
     glBindVertexArray(0);
+    //glBindBuffer(GL_ARRAY_BUFFER, 0);
   }
 
 public:

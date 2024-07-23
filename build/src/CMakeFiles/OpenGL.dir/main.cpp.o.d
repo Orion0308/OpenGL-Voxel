@@ -325,4 +325,34 @@ src/CMakeFiles/OpenGL.dir/main.cpp.o: \
  /home/l/Programming/OpenGL/include/VoxelData.hpp \
  /home/l/Programming/OpenGL/include/WindowManager.hpp \
  /home/l/Programming/OpenGL/include/glad/glad.h \
- /usr/local/include/GLFW/glfw3.h /usr/include/GL/gl.h
+ /usr/local/include/GLFW/glfw3.h \
+ /home/l/Programming/OpenGL/include/WorldBuffer.hpp \
+ /usr/include/c++/14.1.1/memory \
+ /usr/include/c++/14.1.1/bits/stl_uninitialized.h \
+ /usr/include/c++/14.1.1/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/14.1.1/bits/align.h \
+ /usr/include/c++/14.1.1/bits/unique_ptr.h \
+ /usr/include/c++/14.1.1/bits/shared_ptr.h \
+ /usr/include/c++/14.1.1/bits/shared_ptr_base.h \
+ /usr/include/c++/14.1.1/bits/allocated_ptr.h \
+ /usr/include/c++/14.1.1/ext/aligned_buffer.h \
+ /usr/include/c++/14.1.1/ext/concurrence.h \
+ /usr/include/c++/14.1.1/bits/shared_ptr_atomic.h \
+ /usr/include/c++/14.1.1/bits/atomic_base.h \
+ /usr/include/c++/14.1.1/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/14.1.1/bits/atomic_wait.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
+ /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h /usr/include/syscall.h \
+ /usr/include/sys/syscall.h /usr/include/asm/unistd.h \
+ /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
+ /usr/include/c++/14.1.1/bits/std_mutex.h \
+ /usr/include/c++/14.1.1/backward/auto_ptr.h \
+ /usr/include/c++/14.1.1/bits/ranges_uninitialized.h \
+ /usr/include/c++/14.1.1/bits/out_ptr.h \
+ /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
+ /usr/include/c++/14.1.1/pstl/execution_defs.h \
+ /usr/include/c++/14.1.1/vector /usr/include/c++/14.1.1/bits/stl_vector.h \
+ /usr/include/c++/14.1.1/bits/stl_bvector.h \
+ /usr/include/c++/14.1.1/bits/vector.tcc /usr/include/GL/gl.h
