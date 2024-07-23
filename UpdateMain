@@ -1,0 +1,53 @@
+#!/bin/bash
+
+commit_message=$1
+
+# Check if a commit message was provided
+if [ -z "$commit_message" ]; then
+    echo "Error: No commit message provided."
+    exit 1
+fi
+
+# Stage changes
+git add .
+if [ $? -ne 0 ]; then
+    echo "Error: git add failed."
+    exit 1
+fi
+
+# Commit changes
+git commit -m "$commit_message"
+if [ $? -ne 0 ]; then
+    echo "Error: git commit failed."
+    exit 1
+fi
+
+# Checkout main branch
+git checkout main
+if [ $? -ne 0 ]; then
+    echo "Error: git checkout main failed."
+    exit 1
+fi
+
+# Merge active branch
+git merge active
+if [ $? -ne 0 ]; then
+    echo "Error: git merge active failed."
+    exit 1
+fi
+
+# Push changes
+git push
+if [ $? -ne 0 ]; then
+    echo "Error: git push failed."
+    exit 1
+fi
+
+# Checkout active branch
+git checkout active
+if [ $? -ne 0 ]; then
+    echo "Error: git checkout active failed."
+    exit 1
+fi
+
+echo "Script executed successfully."
