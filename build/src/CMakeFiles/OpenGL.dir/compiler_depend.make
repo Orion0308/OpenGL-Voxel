@@ -4,12 +4,16 @@
 src/CMakeFiles/OpenGL.dir/Engine.cpp.o: /home/l/Programming/OpenGL/src/Engine.cpp \
   /home/l/Programming/OpenGL/include/Camera.hpp \
   /home/l/Programming/OpenGL/include/Engine.hpp \
+  /home/l/Programming/OpenGL/include/Interfaces/ShaderTextureInterface.hpp \
   /home/l/Programming/OpenGL/include/Shader.hpp \
+  /home/l/Programming/OpenGL/include/Texture.hpp \
   /home/l/Programming/OpenGL/include/TimeManager.hpp \
   /home/l/Programming/OpenGL/include/VoxelBuffer.hpp \
   /home/l/Programming/OpenGL/include/VoxelData.hpp \
   /home/l/Programming/OpenGL/include/WindowManager.hpp \
   /home/l/Programming/OpenGL/include/glad/glad.h \
+  /home/l/Programming/OpenGL/include/stb_image.h \
+  /usr/include/GL/gl.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -212,6 +216,7 @@ src/CMakeFiles/OpenGL.dir/Engine.cpp.o: /home/l/Programming/OpenGL/src/Engine.cp
   /usr/include/c++/14.1.1/span \
   /usr/include/c++/14.1.1/sstream \
   /usr/include/c++/14.1.1/stdexcept \
+  /usr/include/c++/14.1.1/stdlib.h \
   /usr/include/c++/14.1.1/streambuf \
   /usr/include/c++/14.1.1/string \
   /usr/include/c++/14.1.1/string_view \
@@ -660,14 +665,15 @@ src/CMakeFiles/OpenGL.dir/glad.c.o: /home/l/Programming/OpenGL/src/glad.c \
   /usr/local/include/KHR/khrplatform.h
 
 src/CMakeFiles/OpenGL.dir/main.cpp.o: /home/l/Programming/OpenGL/src/main.cpp \
-  /home/l/Programming/OpenGL/include/Camera.hpp \
   /home/l/Programming/OpenGL/include/Engine.hpp \
+  /home/l/Programming/OpenGL/include/Interfaces/ShaderTextureInterface.hpp \
   /home/l/Programming/OpenGL/include/Shader.hpp \
-  /home/l/Programming/OpenGL/include/TimeManager.hpp \
+  /home/l/Programming/OpenGL/include/Texture.hpp \
   /home/l/Programming/OpenGL/include/VoxelBuffer.hpp \
   /home/l/Programming/OpenGL/include/VoxelData.hpp \
   /home/l/Programming/OpenGL/include/WindowManager.hpp \
   /home/l/Programming/OpenGL/include/glad/glad.h \
+  /home/l/Programming/OpenGL/include/stb_image.h \
   /usr/include/GL/gl.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -871,6 +877,7 @@ src/CMakeFiles/OpenGL.dir/main.cpp.o: /home/l/Programming/OpenGL/src/main.cpp \
   /usr/include/c++/14.1.1/span \
   /usr/include/c++/14.1.1/sstream \
   /usr/include/c++/14.1.1/stdexcept \
+  /usr/include/c++/14.1.1/stdlib.h \
   /usr/include/c++/14.1.1/streambuf \
   /usr/include/c++/14.1.1/string \
   /usr/include/c++/14.1.1/string_view \
@@ -955,8 +962,6 @@ src/CMakeFiles/OpenGL.dir/main.cpp.o: /home/l/Programming/OpenGL/src/main.cpp \
   /usr/include/glm/detail/type_vec4.hpp \
   /usr/include/glm/detail/type_vec4.inl \
   /usr/include/glm/exponential.hpp \
-  /usr/include/glm/ext/matrix_clip_space.hpp \
-  /usr/include/glm/ext/matrix_clip_space.inl \
   /usr/include/glm/ext/matrix_double2x2.hpp \
   /usr/include/glm/ext/matrix_double2x2_precision.hpp \
   /usr/include/glm/ext/matrix_double2x3.hpp \
@@ -993,12 +998,6 @@ src/CMakeFiles/OpenGL.dir/main.cpp.o: /home/l/Programming/OpenGL/src/main.cpp \
   /usr/include/glm/ext/matrix_float4x3_precision.hpp \
   /usr/include/glm/ext/matrix_float4x4.hpp \
   /usr/include/glm/ext/matrix_float4x4_precision.hpp \
-  /usr/include/glm/ext/matrix_projection.hpp \
-  /usr/include/glm/ext/matrix_projection.inl \
-  /usr/include/glm/ext/matrix_transform.hpp \
-  /usr/include/glm/ext/matrix_transform.inl \
-  /usr/include/glm/ext/scalar_constants.hpp \
-  /usr/include/glm/ext/scalar_constants.inl \
   /usr/include/glm/ext/scalar_int_sized.hpp \
   /usr/include/glm/ext/scalar_uint_sized.hpp \
   /usr/include/glm/ext/vector_bool2.hpp \
@@ -1034,10 +1033,6 @@ src/CMakeFiles/OpenGL.dir/main.cpp.o: /home/l/Programming/OpenGL/src/main.cpp \
   /usr/include/glm/fwd.hpp \
   /usr/include/glm/geometric.hpp \
   /usr/include/glm/glm.hpp \
-  /usr/include/glm/gtc/constants.hpp \
-  /usr/include/glm/gtc/constants.inl \
-  /usr/include/glm/gtc/matrix_transform.hpp \
-  /usr/include/glm/gtc/matrix_transform.inl \
   /usr/include/glm/integer.hpp \
   /usr/include/glm/mat2x2.hpp \
   /usr/include/glm/mat2x3.hpp \
@@ -1089,18 +1084,34 @@ src/CMakeFiles/OpenGL.dir/main.cpp.o: /home/l/Programming/OpenGL/src/main.cpp \
 src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.cpp \
   /home/l/Programming/OpenGL/include/stb_image.h \
   /usr/include/alloca.h \
+  /usr/include/assert.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/fp-logb.h \
+  /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls-narrow.h \
+  /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/select.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
@@ -1128,13 +1139,60 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
   /usr/include/bits/types/timer_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
+  /usr/include/c++/14.1.1/bit \
+  /usr/include/c++/14.1.1/bits/concept_check.h \
+  /usr/include/c++/14.1.1/bits/cpp_type_traits.h \
+  /usr/include/c++/14.1.1/bits/exception.h \
+  /usr/include/c++/14.1.1/bits/exception_defines.h \
+  /usr/include/c++/14.1.1/bits/functexcept.h \
+  /usr/include/c++/14.1.1/bits/iterator_concepts.h \
+  /usr/include/c++/14.1.1/bits/move.h \
+  /usr/include/c++/14.1.1/bits/predefined_ops.h \
+  /usr/include/c++/14.1.1/bits/ptr_traits.h \
+  /usr/include/c++/14.1.1/bits/ranges_cmp.h \
+  /usr/include/c++/14.1.1/bits/requires_hosted.h \
+  /usr/include/c++/14.1.1/bits/specfun.h \
   /usr/include/c++/14.1.1/bits/std_abs.h \
+  /usr/include/c++/14.1.1/bits/stl_algobase.h \
+  /usr/include/c++/14.1.1/bits/stl_construct.h \
+  /usr/include/c++/14.1.1/bits/stl_iterator.h \
+  /usr/include/c++/14.1.1/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/14.1.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14.1.1/bits/stl_pair.h \
+  /usr/include/c++/14.1.1/bits/utility.h \
+  /usr/include/c++/14.1.1/bits/version.h \
+  /usr/include/c++/14.1.1/cmath \
+  /usr/include/c++/14.1.1/compare \
+  /usr/include/c++/14.1.1/concepts \
   /usr/include/c++/14.1.1/cstdlib \
+  /usr/include/c++/14.1.1/debug/assertions.h \
+  /usr/include/c++/14.1.1/debug/debug.h \
+  /usr/include/c++/14.1.1/ext/numeric_traits.h \
+  /usr/include/c++/14.1.1/ext/type_traits.h \
+  /usr/include/c++/14.1.1/limits \
+  /usr/include/c++/14.1.1/math.h \
+  /usr/include/c++/14.1.1/new \
   /usr/include/c++/14.1.1/pstl/pstl_config.h \
   /usr/include/c++/14.1.1/stdlib.h \
+  /usr/include/c++/14.1.1/tr1/bessel_function.tcc \
+  /usr/include/c++/14.1.1/tr1/beta_function.tcc \
+  /usr/include/c++/14.1.1/tr1/ell_integral.tcc \
+  /usr/include/c++/14.1.1/tr1/exp_integral.tcc \
+  /usr/include/c++/14.1.1/tr1/gamma.tcc \
+  /usr/include/c++/14.1.1/tr1/hypergeometric.tcc \
+  /usr/include/c++/14.1.1/tr1/legendre_function.tcc \
+  /usr/include/c++/14.1.1/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/14.1.1/tr1/poly_hermite.tcc \
+  /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc \
+  /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
+  /usr/include/c++/14.1.1/tr1/special_function_util.h \
+  /usr/include/c++/14.1.1/type_traits \
   /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
   /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -1143,21 +1201,36 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/limits.h \
+  /usr/include/linux/limits.h \
+  /usr/include/math.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/mmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stddef.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/xmmintrin.h
 
 
-/home/l/Programming/OpenGL/include/stb_image.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/mmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/mm_malloc.h:
+
+/usr/include/c++/14.1.1/math.h:
 
 /home/l/Programming/OpenGL/src/stbInit.cpp:
-
-/usr/include/GL/gl.h:
 
 /usr/include/string.h:
 
@@ -1385,19 +1458,17 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/glm/detail/func_geometric.inl:
 
-/usr/include/glm/vec4.hpp:
+/usr/include/strings.h:
 
-/usr/include/glm/ext/matrix_double2x4_precision.hpp:
+/usr/include/glm/detail/compute_common.hpp:
 
-/usr/include/c++/14.1.1/bits/max_size_type.h:
-
-/usr/include/bits/xopen_lim.h:
-
-/usr/include/c++/14.1.1/bits/ptr_traits.h:
+/usr/include/glm/detail/_vectorize.hpp:
 
 /usr/include/c++/14.1.1/bits/locale_facets.tcc:
 
 /usr/include/c++/14.1.1/bits/ios_base.h:
+
+/home/l/Programming/OpenGL/include/Interfaces/ShaderTextureInterface.hpp:
 
 /usr/include/c++/14.1.1/bits/hash_bytes.h:
 
@@ -1441,31 +1512,15 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/c++/14.1.1/concepts:
 
-/usr/include/wchar.h:
+/usr/include/bits/xopen_lim.h:
 
-/usr/include/glm/mat3x2.hpp:
-
-/usr/include/bits/posix1_lim.h:
-
-/usr/include/c++/14.1.1/bits/locale_facets_nonio.h:
-
-/usr/include/bits/struct_rwlock.h:
-
-/usr/include/glm/ext/vector_uint2_sized.hpp:
-
-/usr/include/c++/14.1.1/bits/uses_allocator_args.h:
+/usr/include/c++/14.1.1/bits/ptr_traits.h:
 
 /usr/include/stdio.h:
 
 /usr/include/bits/wordsize.h:
 
 /usr/include/bits/wctype-wchar.h:
-
-/usr/include/glm/ext/vector_bool4.hpp:
-
-/usr/include/c++/14.1.1/bits/cxxabi_forced.h:
-
-/usr/include/bits/floatn-common.h:
 
 /usr/include/glm/detail/type_vec1.hpp:
 
@@ -1475,15 +1530,27 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/bits/types/struct_timespec.h:
 
-/usr/include/bits/waitflags.h:
+/usr/include/bits/struct_rwlock.h:
 
-/usr/include/ctype.h:
+/usr/include/wchar.h:
 
-/usr/include/bits/types/struct_sched_param.h:
+/usr/include/glm/mat3x2.hpp:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/c++/14.1.1/bits/locale_facets_nonio.h:
+
+/usr/include/glm/ext/vector_uint2_sized.hpp:
+
+/usr/include/c++/14.1.1/bits/uses_allocator_args.h:
 
 /usr/include/bits/types/sigset_t.h:
 
 /usr/include/bits/types/locale_t.h:
+
+/usr/include/glm/detail/compute_vector_relational.hpp:
+
+/usr/include/bits/types/__sigset_t.h:
 
 /usr/include/bits/types/__locale_t.h:
 
@@ -1495,9 +1562,17 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/c++/14.1.1/bits/ranges_util.h:
 
-/usr/include/bits/long-double.h:
+/usr/include/bits/types/__fpos64_t.h:
 
 /usr/include/bits/flt-eval-method.h:
+
+/usr/include/glm/detail/type_mat3x3.hpp:
+
+/usr/include/c++/14.1.1/bits/istream.tcc:
+
+/usr/include/glm/detail/type_mat2x2.hpp:
+
+/usr/include/bits/types.h:
 
 /usr/include/c++/14.1.1/cassert:
 
@@ -1521,21 +1596,39 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/bits/fp-fast.h:
 
+/usr/include/bits/floatn-common.h:
+
+/usr/include/glm/ext/vector_bool4.hpp:
+
+/usr/include/c++/14.1.1/bits/cxxabi_forced.h:
+
 /usr/include/bits/libm-simd-decl-stubs.h:
 
-/usr/include/glm/ext/vector_double2_precision.hpp:
-
-/usr/include/bits/uintn-identity.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h:
-
-/usr/include/c++/14.1.1/ext/atomicity.h:
-
-/usr/include/bits/dlfcn.h:
-
-/usr/include/bits/cpu-set.h:
-
 /usr/include/bits/struct_mutex.h:
+
+/usr/include/glm/detail/_fixes.hpp:
+
+/usr/include/c++/14.1.1/stdlib.h:
+
+/usr/include/c++/14.1.1/bits/locale_facets.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
+
+/usr/include/glm/ext/matrix_float2x3_precision.hpp:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/include/GL/gl.h:
+
+/usr/include/glm/mat2x4.hpp:
+
+/usr/include/c++/14.1.1/debug/debug.h:
+
+/usr/include/c++/14.1.1/bits/algorithmfwd.h:
 
 /usr/include/glm/ext/matrix_double2x2_precision.hpp:
 
@@ -1549,36 +1642,6 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/c++/14.1.1/stdexcept:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/syslimits.h:
-
-/usr/include/bits/errno.h:
-
-/usr/include/bits/timex.h:
-
-/usr/include/c++/14.1.1/bit:
-
-/usr/include/bits/locale.h:
-
-/usr/include/c++/14.1.1/bits/iterator_concepts.h:
-
-/home/l/Programming/OpenGL/include/WindowManager.hpp:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/glm/ext/matrix_float2x3_precision.hpp:
-
-/usr/include/bits/posix2_lim.h:
-
-/usr/include/bits/types/error_t.h:
-
-/usr/include/c++/14.1.1/bits/std_abs.h:
-
-/usr/include/bits/types/clockid_t.h:
-
-/usr/include/bits/stdint-intn.h:
-
-/usr/include/c++/14.1.1/bits/algorithmfwd.h:
-
 /usr/include/bits/time64.h:
 
 /usr/include/bits/stdlib-float.h:
@@ -1587,25 +1650,23 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /home/l/Programming/OpenGL/include/Engine.hpp:
 
-/usr/include/glm/ext/vector_int3_sized.hpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/syslimits.h:
 
-/usr/include/assert.h:
+/usr/include/bits/errno.h:
 
-/usr/include/c++/14.1.1/cwchar:
+/usr/include/bits/timex.h:
 
-/usr/include/c++/14.1.1/bits/locale_classes.h:
+/usr/include/c++/14.1.1/bits/iterator_concepts.h:
 
-/usr/include/c++/14.1.1/charconv:
+/home/l/Programming/OpenGL/include/WindowManager.hpp:
 
-/usr/include/bits/thread-shared-types.h:
+/usr/include/bits/atomic_wide_counter.h:
 
-/usr/include/c++/14.1.1/cmath:
+/usr/include/c++/14.1.1/bit:
 
-/usr/include/glm/ext/vector_uint3.hpp:
+/usr/include/bits/locale.h:
 
-/usr/include/bits/libc-header-start.h:
-
-/usr/include/c++/14.1.1/tr1/beta_function.tcc:
+/home/l/Programming/OpenGL/include/stb_image.h:
 
 /usr/include/glm/ext/vector_int2_sized.hpp:
 
@@ -1620,20 +1681,6 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 /usr/include/glm/ext/matrix_float3x3_precision.hpp:
 
 /usr/include/c++/14.1.1/string_view:
-
-/usr/include/libintl.h:
-
-/usr/include/bits/endianness.h:
-
-/usr/include/c++/14.1.1/tr1/legendre_function.tcc:
-
-/home/l/Programming/OpenGL/include/VoxelBuffer.hpp:
-
-/usr/include/glm/ext/vector_bool3_precision.hpp:
-
-/home/l/Programming/OpenGL/include/glad/glad.h:
-
-/usr/include/c++/14.1.1/format:
 
 /usr/include/c++/14.1.1/bits/ranges_algobase.h:
 
@@ -1653,11 +1700,81 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/c++/14.1.1/cstdlib:
 
-/usr/include/c++/14.1.1/bits/locale_facets.h:
+/usr/include/c++/14.1.1/bits/std_abs.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/include/bits/types/clockid_t.h:
 
-/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/glm/ext/vector_double2_precision.hpp:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h:
+
+/usr/include/c++/14.1.1/ext/atomicity.h:
+
+/usr/include/glm/vec4.hpp:
+
+/usr/include/glm/ext/matrix_double2x4_precision.hpp:
+
+/usr/include/c++/14.1.1/bits/max_size_type.h:
+
+/usr/include/bits/dlfcn.h:
+
+/usr/include/bits/cpu-set.h:
+
+/usr/include/glm/ext/vector_int3_sized.hpp:
+
+/usr/include/assert.h:
+
+/usr/include/c++/14.1.1/cwchar:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/xmmintrin.h:
+
+/usr/include/c++/14.1.1/bits/locale_classes.h:
+
+/usr/include/c++/14.1.1/charconv:
+
+/usr/include/bits/thread-shared-types.h:
+
+/usr/include/c++/14.1.1/cmath:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/ctype.h:
+
+/usr/include/bits/types/struct_sched_param.h:
+
+/usr/include/bits/types/error_t.h:
+
+/home/l/Programming/OpenGL/include/Texture.hpp:
+
+/usr/include/libintl.h:
+
+/usr/include/bits/endianness.h:
+
+/usr/include/c++/14.1.1/tr1/legendre_function.tcc:
+
+/home/l/Programming/OpenGL/include/VoxelBuffer.hpp:
+
+/usr/include/glm/ext/vector_bool3_precision.hpp:
+
+/home/l/Programming/OpenGL/include/glad/glad.h:
+
+/usr/include/bits/stdint-uintn.h:
+
+/usr/include/c++/14.1.1/clocale:
+
+/usr/include/asm/errno.h:
+
+/usr/include/c++/14.1.1/format:
+
+/usr/include/glm/ext/vector_uint3.hpp:
+
+/usr/include/bits/libc-header-start.h:
+
+/usr/include/c++/14.1.1/tr1/beta_function.tcc:
 
 /usr/include/c++/14.1.1/bits/fstream.tcc:
 
@@ -1697,19 +1814,15 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/bits/pthreadtypes.h:
 
-/usr/include/c++/14.1.1/clocale:
+/home/l/Programming/OpenGL/src/main.cpp:
 
-/usr/include/asm/errno.h:
+/usr/include/features.h:
 
-/usr/include/bits/stdint-uintn.h:
+/usr/include/bits/types/__FILE.h:
 
-/usr/include/glm/detail/type_mat3x3.hpp:
-
-/usr/include/c++/14.1.1/bits/istream.tcc:
+/usr/include/bits/sched.h:
 
 /usr/include/bits/select.h:
-
-/usr/include/bits/types/__fpos64_t.h:
 
 /usr/include/glm/detail/type_mat3x4.inl:
 
@@ -1742,18 +1855,6 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 /usr/include/c++/14.1.1/string:
 
 /usr/include/bits/endian.h:
-
-/usr/include/glm/detail/type_mat2x2.hpp:
-
-/usr/include/bits/types.h:
-
-/home/l/Programming/OpenGL/src/main.cpp:
-
-/usr/include/features.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/bits/types/__FILE.h:
 
 /usr/include/c++/14.1.1/bits/memoryfwd.h:
 
@@ -1789,6 +1890,8 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/c++/14.1.1/tr1/exp_integral.tcc:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/emmintrin.h:
+
 /usr/include/bits/time.h:
 
 /usr/include/c++/14.1.1/bits/predefined_ops.h:
@@ -1805,6 +1908,10 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/c++/14.1.1/bits/refwrap.h:
 
+/usr/include/c++/14.1.1/numbers:
+
+/usr/include/c++/14.1.1/bits/uniform_int_dist.h:
+
 /usr/include/c++/14.1.1/array:
 
 /usr/include/bits/mathcalls.h:
@@ -1816,10 +1923,6 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 /usr/include/c++/14.1.1/bits/stl_iterator.h:
 
 /usr/include/c++/14.1.1/bits/streambuf.tcc:
-
-/usr/include/strings.h:
-
-/usr/include/glm/detail/compute_common.hpp:
 
 /usr/local/include/GLFW/glfw3.h:
 
@@ -1907,19 +2010,11 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/c++/14.1.1/debug/assertions.h:
 
-/usr/include/glm/mat2x4.hpp:
-
-/usr/include/c++/14.1.1/debug/debug.h:
-
 /usr/include/c++/14.1.1/ext/string_conversions.h:
 
 /usr/include/glm/ext/matrix_float3x2.hpp:
 
 /usr/include/c++/14.1.1/ext/type_traits.h:
-
-/usr/include/bits/types/__sigset_t.h:
-
-/usr/include/glm/detail/compute_vector_relational.hpp:
 
 /usr/include/glm/ext/vector_float3.hpp:
 
@@ -1943,10 +2038,6 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 
 /usr/include/c++/14.1.1/new:
 
-/usr/include/c++/14.1.1/bits/uniform_int_dist.h:
-
-/usr/include/c++/14.1.1/numbers:
-
 /usr/include/bits/iscanonical.h:
 
 /usr/include/c++/14.1.1/pstl/pstl_config.h:
@@ -1954,10 +2045,6 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/14.1.1/streambuf:
-
-/usr/include/c++/14.1.1/stdlib.h:
-
-/usr/include/glm/detail/_fixes.hpp:
 
 /usr/include/glm/ext/matrix_float2x4_precision.hpp:
 
@@ -2022,5 +2109,3 @@ src/CMakeFiles/OpenGL.dir/stbInit.cpp.o: /home/l/Programming/OpenGL/src/stbInit.
 /usr/include/errno.h:
 
 /usr/include/features-time64.h:
-
-/usr/include/glm/detail/_vectorize.hpp:

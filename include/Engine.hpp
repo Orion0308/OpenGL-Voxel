@@ -1,8 +1,8 @@
-#include "Camera.hpp"
+#include "Interfaces/ShaderTextureInterface.hpp"
 #include "Shader.hpp"
+#include "Texture.hpp"
 #include "VoxelBuffer.hpp"
 #include "WindowManager.hpp"
-#include "TimeManager.hpp"
 
 // Window //
 // Buffers
@@ -21,6 +21,8 @@ private:
   WindowManager windowManager;
   SingleVoxelBuffer singleVoxelBuffer;
   Shader baseShader;
+  Texture texture;
+  IShaderTexture iShaderTexture;
 
 
 public:

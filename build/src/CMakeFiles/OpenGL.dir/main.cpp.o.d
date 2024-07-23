@@ -1,7 +1,8 @@
 src/CMakeFiles/OpenGL.dir/main.cpp.o: \
  /home/l/Programming/OpenGL/src/main.cpp /usr/include/stdc-predef.h \
  /home/l/Programming/OpenGL/include/Engine.hpp \
- /home/l/Programming/OpenGL/include/Camera.hpp \
+ /home/l/Programming/OpenGL/include/Interfaces/ShaderTextureInterface.hpp \
+ /home/l/Programming/OpenGL/include/Shader.hpp \
  /home/l/Programming/OpenGL/include/glad/glad.h \
  /usr/local/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h \
@@ -203,23 +204,9 @@ src/CMakeFiles/OpenGL.dir/main.cpp.o: \
  /usr/include/glm/packing.hpp /usr/include/glm/detail/func_packing.inl \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
- /usr/include/glm/detail/func_integer.inl \
- /usr/include/glm/gtc/matrix_transform.hpp \
- /usr/include/glm/ext/matrix_projection.hpp \
- /usr/include/glm/gtc/constants.hpp \
- /usr/include/glm/ext/scalar_constants.hpp \
- /usr/include/glm/ext/scalar_constants.inl \
- /usr/include/glm/gtc/constants.inl \
- /usr/include/glm/ext/matrix_projection.inl \
- /usr/include/glm/ext/matrix_clip_space.hpp \
- /usr/include/glm/ext/matrix_clip_space.inl \
- /usr/include/glm/ext/matrix_transform.hpp \
- /usr/include/glm/ext/matrix_transform.inl \
- /usr/include/glm/gtc/matrix_transform.inl \
- /home/l/Programming/OpenGL/include/Shader.hpp \
- /usr/include/c++/14.1.1/fstream /usr/include/c++/14.1.1/istream \
- /usr/include/c++/14.1.1/ios /usr/include/c++/14.1.1/iosfwd \
- /usr/include/c++/14.1.1/bits/stringfwd.h \
+ /usr/include/glm/detail/func_integer.inl /usr/include/c++/14.1.1/fstream \
+ /usr/include/c++/14.1.1/istream /usr/include/c++/14.1.1/ios \
+ /usr/include/c++/14.1.1/iosfwd /usr/include/c++/14.1.1/bits/stringfwd.h \
  /usr/include/c++/14.1.1/bits/memoryfwd.h \
  /usr/include/c++/14.1.1/bits/postypes.h /usr/include/c++/14.1.1/cwchar \
  /usr/include/wchar.h \
@@ -330,9 +317,12 @@ src/CMakeFiles/OpenGL.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/fstream.tcc \
  /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/sstream \
  /usr/include/c++/14.1.1/bits/sstream.tcc \
+ /home/l/Programming/OpenGL/include/Texture.hpp \
+ /home/l/Programming/OpenGL/include/Shader.hpp \
+ /home/l/Programming/OpenGL/include/stb_image.h \
+ /usr/include/c++/14.1.1/stdlib.h \
  /home/l/Programming/OpenGL/include/VoxelBuffer.hpp \
  /home/l/Programming/OpenGL/include/VoxelData.hpp \
  /home/l/Programming/OpenGL/include/WindowManager.hpp \
  /home/l/Programming/OpenGL/include/glad/glad.h \
- /usr/local/include/GLFW/glfw3.h \
- /home/l/Programming/OpenGL/include/TimeManager.hpp /usr/include/GL/gl.h
+ /usr/local/include/GLFW/glfw3.h /usr/include/GL/gl.h

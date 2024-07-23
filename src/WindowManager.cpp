@@ -36,7 +36,7 @@ WindowManager::WindowManager() {
   // Enable face culling
   glEnable(GL_CULL_FACE);
   glCullFace(GL_BACK); // Cull the back faces (default)
-  glFrontFace(GL_CW); // Define the front face (default is counter-clockwise)
+  glFrontFace(GL_CW);  // Define the front face (default is counter-clockwise)
   glfwMakeContextCurrent(window);
 }
 

@@ -1,6 +1,10 @@
 #include "Engine.hpp"
 #include "Camera.hpp"
+#include "Interfaces/ShaderTextureInterface.hpp"
 #include "Shader.hpp"
+#include "Texture.hpp"
+#include "TimeManager.hpp"
+#include <GL/gl.h>
 
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
@@ -16,7 +20,8 @@ WindowManager &Engine::getWindowManager() { return windowManager; }
 
 Engine::Engine()
     : baseShader("/home/l/Programming/OpenGL/shaders/baseVertex.vert",
-                 "/home/l/Programming/OpenGL/shaders/baseFragment.frag") {
+                 "/home/l/Programming/OpenGL/shaders/baseFragment.frag"),
+      texture(baseShader), iShaderTexture(baseShader, texture) {
   init();
 }
 
@@ -26,7 +31,7 @@ void Engine::init() {
   glfwSetCursorPosCallback(windowManager.getWindow(), mouse_callback);
   glfwSetScrollCallback(windowManager.getWindow(), scroll_callback);
 
-  baseShader.use();
+  iShaderTexture.sendTextureToShader();
 }
 
 void Engine::update() {
@@ -36,6 +41,7 @@ void Engine::update() {
 }
 
 void Engine::render() {
+
   glm::mat4 model = glm::mat4(1.0f);
   baseShader.setMat4("model", model);
   glm::mat4 projection =
@@ -64,7 +70,6 @@ void processInput(GLFWwindow *window) {
     camera.ProcessKeyboard(LEFT, timeManager.getDeltaTime());
   if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
     camera.ProcessKeyboard(RIGHT, timeManager.getDeltaTime());
-
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback
