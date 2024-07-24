@@ -24,7 +24,7 @@ private:
 
     int w, h, nrChan;
     unsigned char *data =
-        stbi_load("/home/l/Programming/OpenGL/textures/oak_planks.png", &w, &h,
+        stbi_load("/home/liam/Programming/OpenGL/textures/oak_planks.png", &w, &h,
                   &nrChan, 0);
     if (data) {
       glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE,

@@ -1,6 +1,6 @@
-/home/l/Programming/OpenGL/build/CMakeFiles/glad.dir
-/home/l/Programming/OpenGL/build/CMakeFiles/edit_cache.dir
-/home/l/Programming/OpenGL/build/CMakeFiles/rebuild_cache.dir
-/home/l/Programming/OpenGL/build/src/CMakeFiles/OpenGL.dir
-/home/l/Programming/OpenGL/build/src/CMakeFiles/edit_cache.dir
-/home/l/Programming/OpenGL/build/src/CMakeFiles/rebuild_cache.dir
+/home/liam/Programming/OpenGL/build/CMakeFiles/glad.dir
+/home/liam/Programming/OpenGL/build/CMakeFiles/edit_cache.dir
+/home/liam/Programming/OpenGL/build/CMakeFiles/rebuild_cache.dir
+/home/liam/Programming/OpenGL/build/src/CMakeFiles/OpenGL.dir
+/home/liam/Programming/OpenGL/build/src/CMakeFiles/edit_cache.dir
+/home/liam/Programming/OpenGL/build/src/CMakeFiles/rebuild_cache.dir

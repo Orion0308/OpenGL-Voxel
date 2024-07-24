@@ -19,8 +19,8 @@ TimeManager timeManager;
 WindowManager &Engine::getWindowManager() { return windowManager; }
 
 Engine::Engine()
-    : baseShader("/home/l/Programming/OpenGL/shaders/baseVertex.vert",
-                 "/home/l/Programming/OpenGL/shaders/baseFragment.frag"),
+    : baseShader("/home/liam/Programming/OpenGL/shaders/baseVertex.vert",
+        "/home/liam/Programming/OpenGL/shaders/baseFragment.frag"),
       texture(baseShader), iShaderTexture(baseShader, texture) {
   init();
 }
