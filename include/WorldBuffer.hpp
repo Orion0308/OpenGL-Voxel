@@ -24,18 +24,12 @@ public:
     for (float x = 0.0f; x < 16; x++) {
       for (float y = 0.0f; y > -16; y--) {
         for (float z = 0.0f; z < 16; z++) {
+
           glm::vec3 pos{x, y, z};
           positions.push_back(pos);
         }
       }
     }
-    std::cout << "Pos size: " << positions.size() << "\n";
-    std::cout << "Pos size /16/16/16: " << positions.size() / 16 / 16 / 16
-              << "\n";
-    std::cout << "pos 0,0,0 at position 0 in vector " << positions[0].y << "\n";
-    std::cout
-        << "pos which is directly below (according to theory) should = 0,-1,0 <><> "
-        << positions[16].x<<positions[16].y <<positions[16].z<<"\n";
   }
 
   void generateWorldBuffer() {
